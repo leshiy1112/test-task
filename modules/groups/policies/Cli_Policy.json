@@ -1,0 +1,35 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": "iam:CreateLoginProfile",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "iam:ChangePassword",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "iam:DeleteLoginProfile",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "iam:UpdateLoginProfile",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Deny",
+            "Action": "iam:GetAccountPasswordPolicy",
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+        }
+    ]
+}

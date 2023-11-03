@@ -20,16 +20,21 @@ module "iam_roles" {
   roles = [
     {
       name = "roleA",
-      policy = "policyA",
+      actions  = ["sts:AssumeRole"],
+      type = "Service",
+      identifiers = ["ec2.amazonaws.com"],
+      resources = ["*"]
     },
     {
       name = "roleB",
-      policy = "policyB",
+      actions  = ["sts:AssumeRole"],
+      type = "Service",
+      identifiers = ["s3.amazonaws.com"],
     },
   ]
-  # roles_policies = ["policyA", "policyB"]
-  # policy_attachments = [
-  #   { role = "roleB", policy_name = "policyB" },
-  #   { role = "roleA", policy_name = "policyA" },
-  # ]
+  roles_policies = ["policyA", "policyB"]
+  policy_attachments = [
+    { role = "roleB", policy_name = "policyB" },
+    { role = "roleA", policy_name = "policyA" },
+  ]
 }

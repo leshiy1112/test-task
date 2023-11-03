@@ -10,6 +10,7 @@
 - `accounts/`: Contains account-specific Terraform configurations.
 - `modules/`: Contains reusable Terraform modules for common AWS resource patterns.
 
+
 ## Getting Started
 
 ```bash
